@@ -4,7 +4,7 @@ from google import genai
 from google.genai import types
 st.markdown("<h1 style='color: black; font-size: 40px;'>PYTHON AI ASSISTANT</h1><p style='color: blue; font-size: 20px;'>Python AI Assistant can help to your questions related to python</p>", unsafe_allow_html=True)
 
-robo = genai.Client(api_key='API_KEY')
+robo = genai.Client(api_key=st.secrets["API_KEY"])
 
 
 mychat = robo.chats.create(model="gemini-flash-lite-latest")
