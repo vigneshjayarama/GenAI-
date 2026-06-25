@@ -21,6 +21,7 @@ if "mychat" not in st.session_state:
     st.session_state.messages = []
 
 st.title("🐍 Python Expert Chatbot")
+st.markdown("<h1 style='color: black; font-size: 40px;'>PYTHON AI ASSISTANT</h1><p style='color: blue; font-size: 20px;'>Python AI Assistant can help to your questions related to python</p>", unsafe_allow_html=True)
 
 # Display all previous messages
 for msg in st.session_state.messages:
