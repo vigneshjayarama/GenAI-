@@ -1,6 +1,7 @@
 import streamlit as st
 from google import genai
 import json
+import os
 from google.genai import types
 
 HISTORY_FILE = "chat_history.json"
