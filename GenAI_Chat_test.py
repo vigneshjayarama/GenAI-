@@ -35,13 +35,14 @@ if "mychat" not in st.session_state:
         model="gemini-flash-lite-latest", config=config
     )
     st.session_state.messages = []
+    # Initialize session state with loaded history
+    st.session_state.messages = load_history()
 
 st.title("🐍 Python Expert Chatbot")
 st.markdown("<h1 style='color: black; font-size: 40px;'>PYTHON AI ASSISTANT</h1><p style='color: blue; font-size: 20px;'>Python AI Assistant can help to your questions related to python</p>", unsafe_allow_html=True)
 
-# Initialize session state with loaded history
-if "messages" not in st.session_state:
-    st.session_state.messages = load_history()
+
+    
 
 # Display all previous messages
 for msg in st.session_state.messages:
