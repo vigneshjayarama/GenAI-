@@ -63,5 +63,6 @@ if prompt:
         st.write(response.text)
 
     # Persist to disk
-    save_history(st.session_state.messages)
+    
     st.session_state.messages.append({"role": "assistant", "content": response.text})
+    save_history(st.session_state.messages)
